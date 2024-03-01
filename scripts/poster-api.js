@@ -4,9 +4,29 @@ import ApiClient from "./api-client.js";
 import { API_KEY } from "./constant.js";
 
 const appDivEl = document.querySelector(".app-container");
-
-
 const populateListEl = (posters, totalPages) => {
+    appDivEl.innerHTML = ""
+    const posterListEl = document.createElement('ul');
+    posterListEl.classList.add("app-container__list")
+    posters.forEach((poster) => {
+        const liItemEl = document.createElement('li');
+        liItemEl.classList.add("app-container__item")
+
+        const imgEl = document.createElement('img');
+        imgEl.classList.add('app-container__img');
+        imgEl.src = poster.Poster
+
+        liItemEl.appendChild(imgEl)
+
+        posterListEl.appendChild(liItemEl);
+    })
+    appDivEl.appendChild(posterListEl);
+
+    const paginationNumEl = document.createElement('p')
+    paginationNumEl.classList.add('app-container__pagination')
+    paginationNumEl.textContent = `${posters.length} of ${totalPages}`;
+
+    appDivEl.appendChild(paginationNumEl);
 
 }
 
@@ -31,7 +51,7 @@ const processApiRes = (posters) => {
 const formEl = document.querySelector(".header-container__search-form");
 formEl.addEventListener("submit", (e) => {
   e.preventDefault();
-  appDivEl.innerHTML = ""
+  appDivEl.innerHTML = " "
   const keyword = e.target.keyword.value;
   getGetPosterBySearch(keyword);
   e.target.keyword.value = "";
@@ -43,6 +63,6 @@ const renderUi = (state, msg) => {
     `;
 };
 
-//appDivEl.innerHTML  = renderUi(2, "")
+appDivEl.innerHTML  = renderUi(2, "")
 
 

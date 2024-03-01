@@ -153,4 +153,9 @@ body {
 }
 .app-container__img {
   width: 100%;
+}
+.app-container__pagination {
+  display: flex;
+  color: #FFFFFF;
+  justify-content: center;
 }/*# sourceMappingURL=poster.css.map */
