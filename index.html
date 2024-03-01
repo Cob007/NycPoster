@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NYC POSTER</title>
     <link href="./styles/poster.css" rel="stylesheet" />
-</head>
-<body>
-    <header>
-
+  </head>
+  <body>
+    <header class="header-container">
+      <nav class="header-container__nav">
+        <h2 class="header-container__logoname">NYC POSTER</h2>
+        <form class="header-container__search-form">
+          <input
+            type="text"
+            name="name"
+            class="header-container__input"
+            name="name"
+            placeholder="Search by Keyword"
+          />
+          <button type="submit" 
+                class="header-container__button"
+          >
+            <img
+            class="header-container__img"
+            src="./assets/icons/search.png"
+          />
+          </button>
+        </form>
+      </nav>
+      <div class="header-container__divider"></div>
     </header>
     <main>
+        <div class="error-container"> 
+            <img class="error-container__img" 
+            src="./assets/icons/giphy.gif" alt="loading gif" />
+        
+            <p class='error-container__msg'>Key Word Not Found</p>
+        </div>
 
     </main>
-    <footer>
-        
-    </footer>
-    
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-<script src="./scripts/index-page.js" type="module"></script>
+    <footer></footer>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+  <script src="./scripts/poster-api.js" type="module"></script>
 </html>

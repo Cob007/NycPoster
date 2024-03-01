@@ -7,5 +7,13 @@ const getGetPosterBySearch = async (keyword) => {
 }
 
 const populatePosterList = (posters) => {
-    
+
 }
+
+
+
+const formEl = document.querySelector('.header-container__search-form')
+formEl.addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log("clicked!")
+})

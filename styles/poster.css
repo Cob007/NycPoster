@@ -1,1 +1,102 @@
-/*# sourceMappingURL=poster.css.map */
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro.ttf") format("ttf"), url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("otf");
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("otf"), url("../../assets/fonts/AvenirNextLTProBold.ttf") format("ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("otf"), url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("ttf");
+  font-weight: 500;
+}
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Avenir", serif, sans-serif;
+  background-color: #000000;
+}
+
+.header-container {
+  background-color: #000000;
+  padding: 16px;
+}
+.header-container__nav {
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header-container__nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.header-container__search-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header-container__logoname {
+  color: #FFFFFF;
+  font-size: 2rem;
+}
+.header-container__input {
+  height: 50px;
+  font-size: 1.2rem;
+  padding: 0 16px;
+  border: 1px solid #AFAFAF;
+  background-color: #FAFAFA;
+  border-radius: 5px;
+  font-family: "Avenir";
+}
+.header-container__input:focus {
+  outline: none !important;
+  border: 1px solid #323232;
+}
+.header-container__input::-moz-placeholder {
+  font-family: "Avenir";
+  font-size: 1.3rem;
+  color: #323232;
+}
+.header-container__input::placeholder {
+  font-family: "Avenir";
+  font-size: 1.3rem;
+  color: #323232;
+}
+.header-container__button {
+  height: 52px;
+  margin: 0 16px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #AFAFAF;
+}
+.header-container__img {
+  height: 35px;
+}
+.header-container__divider {
+  border: 1px solid white;
+}
+
+.error-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.error-container__img {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+.error-container__msg {
+  color: white;
+  font-weight: 500;
+  font-size: 1.2rem;
+  justify-content: center;
+  margin: 0 auto;
+}/*# sourceMappingURL=poster.css.map */
