@@ -72,7 +72,7 @@ body {
 }
 .header-container__input:focus {
   outline: none !important;
-  border: 1px solid #323232;
+  border: 1px solid firebrick;
 }
 .header-container__input::-moz-placeholder {
   font-family: "Avenir";
@@ -90,6 +90,9 @@ body {
   padding: 8px;
   border-radius: 5px;
   border: 1px solid #AFAFAF;
+}
+.header-container__button:hover {
+  background-color: firebrick;
 }
 .header-container__img {
   height: 35px;
@@ -118,6 +121,9 @@ body {
   height: 200px;
   margin: 0 auto;
 }
+.error-container__img:hover {
+  transform: scale(1.2);
+}
 .error-container__msg {
   color: rgb(255, 0, 0);
   font-weight: 500;
@@ -140,6 +146,7 @@ body {
   height: auto;
   margin: 0;
   padding: 0;
+  transition: 0.1s;
 }
 @media screen and (min-width: 768px) {
   .app-container__item {
@@ -151,11 +158,30 @@ body {
     width: 33.33%;
   }
 }
+.app-container__item:hover, .app-container__item:focus {
+  transform: translateY(0);
+}
 .app-container__img {
   width: 100%;
+  transition: all 0.5s ease-out allow-discrete;
+  transition: 200ms linear 50ms;
+  filter: blur(1px);
+}
+.app-container__img:hover {
+  transform: scale(1.05);
+  filter: blur(0) contrast(20);
 }
 .app-container__pagination {
   display: flex;
   color: #FFFFFF;
   justify-content: center;
+}
+.app-container__div-btn {
+  display: flex;
+  justify-content: center;
+}
+.app-container__btn {
+  font-size: 1.3rem;
+  color: #000000;
+  padding: 8px 16px;
 }/*# sourceMappingURL=poster.css.map */

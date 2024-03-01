@@ -65,7 +65,7 @@ body {
 
   &__input:focus {
     outline: none !important;
-    border: 1px solid $primary-color-black;
+    border: 1px solid firebrick;
   }
 
   &__input::placeholder{
@@ -80,6 +80,10 @@ body {
     padding: 8px;
     border-radius: 5px;
     border: 1px solid $primary-color-silver;
+  }
+
+  &__button:hover {
+    background-color: firebrick;
   }
 
   &__img {

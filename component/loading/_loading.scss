@@ -10,6 +10,13 @@
         height: 200px;
         margin: 0 auto ;
     }
+
+    &__img:hover {
+        transform: scale(1.2);
+    }
+
+
+
     &__msg {
         color: rgb(255, 0, 0);
         font-weight: 500;

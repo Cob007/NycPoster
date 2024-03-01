@@ -22,6 +22,8 @@
         height: auto;
         margin: 0;
         padding: 0;
+        transition: 0.1s;
+
         @include tablet {
             width:50%
         }
@@ -30,13 +32,40 @@
         }
     }
 
+    &__item:hover,
+    &__item:focus {
+        transform: translateY(0);
+    }
+
     &__img {
         width: 100%;
+        //transition: 0.5 ease-in-out;
+        transition: all 0.5s ease-out allow-discrete;
+        transition: 200ms linear 50ms;
+        filter: blur(1px);
     }
+
+    &__img:hover {
+        transform: scale(1.05);
+        filter: blur(0) contrast(20);
+    }
+
+
 
     &__pagination {
         display: flex;
         color: $primary-color-white;
         justify-content: center;
+    }
+
+    &__div-btn {
+        display: flex;
+        justify-content: center;   
+    }
+
+    &__btn {
+        font-size: 1.3rem;
+        color: $secondary-color-darkblack;
+        padding: 8px 16px;
     }
 }
