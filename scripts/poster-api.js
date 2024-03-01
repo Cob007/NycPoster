@@ -1,3 +1,4 @@
+import CustomState from "../component/custom/CustomState.js";
 import Loading from "../component/loading/Loading.js";
 import ApiClient from "./api-client.js"
 import { API_KEY } from "./constant.js"
@@ -8,7 +9,7 @@ const getGetPosterBySearch = async (keyword) => {
 }
 
 const populatePosterList = (posters) => {
-
+    console.log("Poster : ", posters)
 }
 
 
@@ -16,7 +17,9 @@ const populatePosterList = (posters) => {
 const formEl = document.querySelector('.header-container__search-form')
 formEl.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log("clicked!")
+    const keyword =  e.target.keyword.value;
+    getGetPosterBySearch(keyword);
+    e.target.keyword.value = '' 
 })
 
 
@@ -24,7 +27,8 @@ formEl.addEventListener('submit', (e) => {
 const appDivEl = document.querySelector('.app-container');
 const renderUi = () => {
     return `
-        ${Loading}
+        ${CustomState(1)}
     `
 }
-appDivEl.innerHTML = renderUi()
+//appDivEl.innerHTML = renderUi()
+
