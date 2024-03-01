@@ -1,3 +1,4 @@
+import Loading from "../component/loading/Loading.js";
 import ApiClient from "./api-client.js"
 import { API_KEY } from "./constant.js"
 
@@ -17,3 +18,13 @@ formEl.addEventListener('submit', (e) => {
     e.preventDefault();
     console.log("clicked!")
 })
+
+
+
+const appDivEl = document.querySelector('.app-container');
+const renderUi = () => {
+    return `
+        ${Loading}
+    `
+}
+appDivEl.innerHTML = renderUi()
