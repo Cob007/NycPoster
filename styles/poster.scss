@@ -3,3 +3,34 @@
 @use "./partials/mixins" as *;
 @use "./partials//global" as *;
 @use "../component/loading/loading" as *;
+
+
+.app-container {
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;   
+    }
+
+    &__item {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        @include tablet {
+            width:50%
+        }
+        @include desktop {
+            width: 33.33%;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
